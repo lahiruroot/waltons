@@ -1,13 +1,14 @@
 import React from 'react'
 import Navbar from './components/navbar/navbar'
-import Heroscreen from './components/hadder/hadder'
+import HomeSection from './components/home/home'
 import './main.css'
+import './costum_css/scrollbar.css'
 function App() {
 
   return (
     <>
       <Navbar />
-      <Heroscreen />
+      <HomeSection />
     </>
   )
 }

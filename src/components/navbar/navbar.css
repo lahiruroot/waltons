@@ -1,87 +1,80 @@
-/* src/components/NavBar.css */
+/* src/components/Navbar.css */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar-logo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.navbar-toggle {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navbar-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Fullscreen Overlay */
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.overlay.open {
+  height: 100%;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay-content {
+  position: relative;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.overlay-content li {
+  list-style: none;
+  margin: 1.5rem 0;
+}
+
+.overlay-content li a {
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.overlay-content li a:hover {
+  color: #ff9100;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
     padding: 1rem;
-    position: relative;
   }
-  
-  .navbar-logo h1 {
-    color: #fff;
-  }
-  
-  .navbar-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-  }
-  
-  .navbar-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 4px 0;
-    transition: 0.4s;
-  }
-  
-  .navbar-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-  }
-  
-  .navbar-links li {
-    margin: 0 1rem;
-  }
-  
-  .navbar-links li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s;
-  }
-  
-  .navbar-links li a:hover {
-    color: #f8b400;
-  }
-  
-  /* Mobile */
-  @media (max-width: 768px) {
-    .navbar-toggle {
-      display: flex;
-    }
-  
-    .navbar-links {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      flex-direction: column;
-      background-color: #333;
-      align-items: center;
-      display: none;
-    }
-  
-    .navbar-links.active {
-      display: flex;
-    }
-  
-    .navbar-links li {
-      margin: 1rem 0;
-    }
-  
-    .navbar.open .bar:nth-child(2) {
-      opacity: 0;
-    }
-  
-    .navbar.open .bar:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
-    }
-  
-    .navbar.open .bar:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg);
-    }
-  }
-  
+}
