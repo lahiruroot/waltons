@@ -3,18 +3,13 @@ import './hadder.css';
 
 const Heroscreen = () => {
   return (
-    <header className="fixed-header">
-      <div className="hero-container">
-        <div className="hero-overlay"></div>
-        <div className="hero-content">
-          <h1>Discover Modern Architecture</h1>
-          <p>Innovative designs that inspire and elevate.</p>
-          <button className="hero-button">Explore More</button>
-        </div>
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>Welcome to ArchDesign</h1>
+        <p>Transforming Spaces with Innovative Designs</p>
+        <button class="hero-button">Learn More</button>
       </div>
-    </header>
-
-
+    </section>
   );
 };
 
