@@ -1,0 +1,87 @@
+/* src/components/NavBar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+    position: relative;
+  }
+  
+  .navbar-logo h1 {
+    color: #fff;
+  }
+  
+  .navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .navbar-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+  }
+  
+  .navbar-links li {
+    margin: 0 1rem;
+  }
+  
+  .navbar-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+  }
+  
+  .navbar-links li a:hover {
+    color: #f8b400;
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .navbar-toggle {
+      display: flex;
+    }
+  
+    .navbar-links {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      flex-direction: column;
+      background-color: #333;
+      align-items: center;
+      display: none;
+    }
+  
+    .navbar-links.active {
+      display: flex;
+    }
+  
+    .navbar-links li {
+      margin: 1rem 0;
+    }
+  
+    .navbar.open .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .navbar.open .bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+  
+    .navbar.open .bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
+  
