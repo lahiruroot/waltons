@@ -4,7 +4,7 @@ import './home.css';
 
 const HomeSection = () => {
   return (
-    <section className="home-section">
+    <section id="who-we-are" className="section">
       <div className="home-content">
         <h1>Welcome to ArchDesign</h1>
         <p>Transforming Spaces with Innovative Designs</p>

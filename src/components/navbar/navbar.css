@@ -198,3 +198,29 @@ nav ul li a:hover::after {
     opacity: 1;
   }
 }
+
+/* hover */
+.overlay-content a {
+  display: inline-block;
+  transition: transform 5.5s ease, color 5.5s ease;
+  text-decoration: none; /* Optional: remove underline from links */
+  color: #ffffff; /* Optional: set initial color */
+}
+
+.overlay-content a:hover {
+  transform: scale(1.2);
+  color: #f39c12;
+}
+
+/* mobili hide */
+/* Default styles for overlay-info */
+.overlay-info {
+  display: block;
+}
+
+/* Hide overlay-info on screens smaller than 768px */
+@media (max-width: 768px) {
+  .overlay-info {
+    display: none;
+  }
+}

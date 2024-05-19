@@ -11,6 +11,15 @@ const Navbar = () => {
   const closeNav = () => {
     setIsOpen(false);
   };
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      closeNav();
+    }
+  };
+
   return (
     <>
       <nav className="navbar">
@@ -27,12 +36,12 @@ const Navbar = () => {
         <div className="overlay-content-wrapper">
           <div className="overlay-content">
             <ul>
-              <li><a href="#home">HOME</a></li>
-              <li><a href="#projects">WHO WE ARE</a></li>
-              <li><a href="#about">PROPERTIES</a></li>
-              <li><a href="#commercial">COMMERCIAL</a></li>
-              <li><a href="#projects">PROJECT'S</a></li>
-              <li><a href="#contact">CONTACT</a></li>
+              <li><a href="#home" onClick={() => scrollToSection('home')}>HOME</a></li>
+              <li><a href="#who-we-are" onClick={() => scrollToSection('who-we-are')}>WHO WE ARE</a></li>
+              <li><a href="#about" onClick={() => scrollToSection('about')}>PROPERTIES</a></li>
+              <li><a href="#commercial" onClick={() => scrollToSection('commercial')}>COMMERCIAL</a></li>
+              <li><a href="#projects" onClick={() => scrollToSection('projects')}>PROJECT'S</a></li>
+              <li><a href="#contact" onClick={() => scrollToSection('contact')}>CONTACT</a></li>
             </ul>
           </div>
           <div className="overlay-info">
@@ -50,10 +59,11 @@ const Navbar = () => {
           >
             <path d="M19.71 4.29a1 1 0 00-1.42 0L12 10.59 5.71 4.29a1 1 0 00-1.42 1.42L10.59 12l-6.3 6.29a1 1 0 101.42 1.42L12 13.41l6.29 6.3a1 1 0 001.42-1.42L13.41 12l6.3-6.29a1 1 0 000-1.42z" />
           </svg>
-        </button>      </div>
+        </button>
+      </div>
       {!isOpen && (
         <div className="hero-screen">
-        
+          {/* Your hero screen content here */}
         </div>
       )}
     </>
