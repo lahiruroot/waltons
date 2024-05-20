@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './navbar.css';
+import './navimg.css';
+import logo from '../../assets/logo1.png';
+import navimage from '../../assets/waltons.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +28,7 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="navbar-logo">
           <h1></h1>
-          <img src="path/to/your/logo.png" alt="Waltons Logo" />
+          <img src={logo} alt="Waltons Logo " className="logo-img" />
         </div>
         <div className="navbar-toggle" onClick={toggleNav}>
           <span className="bar"></span>
@@ -46,8 +49,8 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="overlay-info">
-            <img src="your-image-url.jpg" alt="Description of the image" />
-            <p>Your description text goes here. This is a place where you can add some information about your company or the content of the navigation links.</p>
+          <img src={navimage} alt="Waltons Logo " className="nav-img" />
+            {/* <p>Your description text goes here. This is a place where you can add some information about your company or the content of the navigation links.</p> */}
           </div>
         </div>
         <button className="close-button" onClick={closeNav}>

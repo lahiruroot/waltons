@@ -11,9 +11,25 @@
   color: #fff;
 }
 
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
 .navbar-logo h1 {
   margin: 0;
 }
+
+.logo-img {
+  height: 120px;
+  /* Adjust the height to make the logo smaller */
+  width: auto;
+ 
+  /* Maintain the aspect ratio */
+  margin-right: 10px;
+  /* Space between the logo and the text */
+}
+
 
 .navbar-toggle {
   cursor: pointer;
@@ -97,6 +113,7 @@
   font-size: 1.5rem;
   transition: color 0.3s ease;
 }
+
 /* underline */
 nav ul {
   list-style: none;
@@ -132,9 +149,11 @@ nav ul li a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
 /* Hover effect */
 .overlay-content ul li a:hover {
-  color: #ffae00; /* Change this to the color you want */
+  color: #ffae00;
+  /* Change this to the color you want */
 }
 
 .overlay-info {
@@ -184,6 +203,7 @@ nav ul li a:hover::after {
   from {
     transform: translateY(-20px);
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -194,6 +214,7 @@ nav ul li a:hover::after {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -203,8 +224,10 @@ nav ul li a:hover::after {
 .overlay-content a {
   display: inline-block;
   transition: transform 5.5s ease, color 5.5s ease;
-  text-decoration: none; /* Optional: remove underline from links */
-  color: #ffffff; /* Optional: set initial color */
+  text-decoration: none;
+  /* Optional: remove underline from links */
+  color: #ffffff;
+  /* Optional: set initial color */
 }
 
 .overlay-content a:hover {
