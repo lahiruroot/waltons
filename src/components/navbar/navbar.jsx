@@ -40,16 +40,16 @@ const Navbar = () => {
         <div className="overlay-content-wrapper">
           <div className="overlay-content">
             <ul>
-              <li><a href="#home" onClick={() => scrollToSection('home')}>HOME</a></li>
-              <li><a href="#who-we-are" onClick={() => scrollToSection('who-we-are')}>WHO WE ARE</a></li>
-              <li><a href="#about" onClick={() => scrollToSection('about')}>PROPERTIES</a></li>
-              <li><a href="#commercial" onClick={() => scrollToSection('commercial')}>COMMERCIAL</a></li>
-              <li><a href="#projects" onClick={() => scrollToSection('projects')}>PROJECT'S</a></li>
-              <li><a href="#contact" onClick={() => scrollToSection('contact')}>CONTACT</a></li>
+              <li className='nav-item'><a href="#home" onClick={() => scrollToSection('home')}> HOME</a></li>
+              <li className='nav-item'><a href="#who-we-are" onClick={() => scrollToSection('who-we-are')}> WHO WE ARE</a></li>
+              <li className='nav-item'><a href="#about" onClick={() => scrollToSection('about')}>PROPERTIES</a></li>
+              <li className='nav-item'><a href="#commercial" onClick={() => scrollToSection('commercial')}>COMMERCIAL</a></li>
+              <li className='nav-item'><a href="#projects" onClick={() => scrollToSection('projects')}>PROJECT'S</a></li>
+              <li className='nav-item'><a href="#contact" onClick={() => scrollToSection('contact')}> CONTACT</a></li>
             </ul>
           </div>
           <div className="overlay-info">
-          <img src={navimage} alt="Waltons Logo " className="nav-img" />
+            <img src={navimage} alt="Waltons Logo " className="nav-img" />
             {/* <p>Your description text goes here. This is a place where you can add some information about your company or the content of the navigation links.</p> */}
           </div>
         </div>
