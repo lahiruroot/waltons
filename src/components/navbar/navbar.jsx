@@ -24,7 +24,8 @@ const Navbar = () => {
     <>
       <nav className="navbar">
         <div className="navbar-logo">
-          <h1>Waltons</h1>
+          <h1></h1>
+          <img src="path/to/your/logo.png" alt="Waltons Logo" />
         </div>
         <div className="navbar-toggle" onClick={toggleNav}>
           <span className="bar"></span>
