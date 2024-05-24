@@ -1,0 +1,97 @@
+.AutoScalingButton {
+    background-image: linear-gradient(to bottom, #09c6eb, #139ceb);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 24px 120px;
+    border-radius: 0px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.AutoScalingButton:hover {
+    transform: scale(1.1);
+}
+
+
+.partner-inner img {
+    transition: filter 0.3s ease;
+}
+
+.partner-inner img:hover {
+    filter: brightness(100%);
+}
+
+.partner-inner img:not(:hover) {
+    filter: brightness(45.2%);
+    color: rgb(236, 236, 236);
+}
+
+/* Animation */
+
+.carousel-container {
+    position: relative;
+    height: 500px;
+    border: none;
+    /* Ensure no border */
+
+}
+
+
+
+.logo-item {
+    margin: 0 2px;
+    /* 4px gap between logos (2px on each side) */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+
+
+.logo-item:hover {
+    transform: scale(1.1);
+}
+
+.logo-image {
+    width: 300px;
+    /* Increase the width */
+    height: 400px;
+    /* Increase the height */
+    object-fit: cover;
+    /* Ensure the image covers the whole area */
+}
+
+/* device res */
+/* Default styles for mobile view */
+.carousel-container {
+    display: none;
+}
+
+.mobile-view {
+    display: block;
+}
+
+/* Styles for desktop view */
+@media (min-width: 1024px) {
+    .carousel-container {
+        display: block;
+    }
+
+    .mobile-view {
+        display: none;
+    }
+}
+
+/* device res */
+
+/* overlay */
+.logo-item img {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.logo-item :hover {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+}
