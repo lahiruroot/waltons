@@ -25,43 +25,45 @@ const Add = () => {
     }, []);
 
     return (
-        <div>
-            <h2>Properties</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Topic</th>
-                        <th>Contact Number</th>
-                        <th>Location</th>
-                        <th>Price</th>
-                        <th>Description</th>
-                        <th>Payment Details</th>
-                        <th>Facilities</th>
-                        <th>Action</th>
+        <table className="min-w-full bg-white border border-gray-300">
+            <thead>
+                <tr className="bg-gray-200">
+                    <th className="py-2 px-4 border-b border-gray-300 text-left">Topic</th>
+                    <th className="py-2 px-4 border-b border-gray-300 text-left">Contact Number</th>
+                    <th className="py-2 px-4 border-b border-gray-300 text-left">Location</th>
+                    <th className="py-2 px-4 border-b border-gray-300 text-left">Price</th>
+                    <th className="py-2 px-4 border-b border-gray-300 text-left">Description</th>
+                    <th className="py-2 px-4 border-b border-gray-300 text-left">Payment Details</th>
+                    <th className="py-2 px-4 border-b border-gray-300 text-left">Facilities</th>
+                    <th className="py-2 px-4 border-b border-gray-300 text-left">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {properties.map(property => (
+                    <tr key={property.id} className="hover:bg-gray-100">
+                        <td className="py-2 px-4 border-b border-gray-300">{property.topic}</td>
+                        <td className="py-2 px-4 border-b border-gray-300">{property.contactNumber}</td>
+                        <td className="py-2 px-4 border-b border-gray-300">{property.location}</td>
+                        <td className="py-2 px-4 border-b border-gray-300">{property.price}</td>
+                        <td className="py-2 px-4 border-b border-gray-300">{property.description}</td>
+                        <td className="py-2 px-4 border-b border-gray-300">{property.paymentDetails}</td>
+                        <td className="py-2 px-4 border-b border-gray-300">
+                            {Object.entries(property.facilities).map(([key, value]) => (
+                                value && <span key={key}>{key}<br /></span>
+                            ))}
+                        </td>
+                        <td className="py-2 px-4 border-b border-gray-300">
+                            <button
+                                onClick={() => deleteProperty(property.id)}
+                                className="bg-red-500 text-white py-1 px-2 rounded hover:bg-red-700"
+                            >
+                                Delete
+                            </button>
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
-                    {properties.map(property => (
-                        <tr key={property.id}>
-                            <td>{property.topic}</td>
-                            <td>{property.contactNumber}</td>
-                            <td>{property.location}</td>
-                            <td>{property.price}</td>
-                            <td>{property.description}</td>
-                            <td>{property.paymentDetails}</td>
-                            <td>
-                                {Object.entries(property.facilities).map(([key, value]) => (
-                                    value && <span key={key}>{key}<br /></span>
-                                ))}
-                            </td>
-                            <td>
-                                <button onClick={() => deleteProperty(property.id)}>Delete</button>
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
+                ))}
+            </tbody>
+        </table>
     );
 };
 
