@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './carousel.css';
+import Mobile_cr from "./mobile_carousel/mobile_cr";
 
 const Carousel = () => {
   const [selectedLogo, setSelectedLogo] = useState(null);
@@ -16,6 +17,8 @@ const Carousel = () => {
     slidesToScroll: 5,
     autoplay: true,
     autoplaySpeed: 5000,
+    fade: false,
+    pauseOnHover: true, 
   };
 
   const logos = [
@@ -37,7 +40,7 @@ const Carousel = () => {
 
   return (
     <section >
-      <div className="carousel-container py-8 lg:py-16 mx-auto max-w-screen-xl px-1"> 
+      <div className="carousel-container py-8 lg:py-16 mx-auto max-w-screen-xl px-1">
         <Slider {...settings}>
           {logos.map((logo) => (
             <div className="logo-item rounded" key={logo.id} onClick={() => handleLogoClick(logo)}>
@@ -50,8 +53,8 @@ const Carousel = () => {
           ))}
         </Slider>
       </div>
-      <div className="mobile-view">
-       gdfgfdgdg
+      <div className="mobile-view py-16">
+        <Mobile_cr />
       </div>
     </section>
 

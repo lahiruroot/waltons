@@ -1,14 +1,16 @@
-import { useState } from 'react'
 import Hero from './components/heero/hero'
 import Content from './components/content/content'
+import Newform from './components/forms/add_property/add_property'
+import Add from './components/data/admin'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <Hero />
       <Content />
+      <Newform />
+      <Add />
     </>
   )
 }

@@ -14,29 +14,6 @@
   <!-- cards section -->
   <script src="https://cdn.jsdelivr.net/npm/tailwindcss-cdn@3.4.1/tailwindcss.js"></script>
   <script src="//unpkg.com/alpinejs" defer></script>
-  <div x-data="swipeCards()" x-init="
-			let isDown = false;
-			let startX;
-			let scrollLeft;
-			$el.addEventListener('mousedown', (e) => {
-			isDown = true;
-			startX = e.pageX - $el.offsetLeft;
-			scrollLeft = $el.scrollLeft;
-			});
-			$el.addEventListener('mouseleave', () => {
-			isDown = false;
-			});
-			$el.addEventListener('mouseup', () => {
-			isDown = false;
-			});
-			$el.addEventListener('mousemove', (e) => {
-			if (!isDown) return;
-			e.preventDefault();
-			const x = e.pageX - $el.offsetLeft;
-			const walk = (x - startX) * 1;
-			$el.scrollLeft = scrollLeft - walk;
-			});
-			" class="overflow-x-scroll scrollbar-hide mb-4 relative px-0.5" style="overflow-y: hidden;">
     <!-- cards section -->
 </body>
 
